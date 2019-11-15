@@ -24,7 +24,7 @@
         <el-row>
           <el-col :span="24">
             <el-button type="primary" plain @click="login('ruleForm')">登录</el-button>
-            <el-button type="primary" plain @click="reg()">注册</el-button>
+            <el-button type="primary" plain @click="reg('ruleForm')">注册</el-button>
           </el-col>
         </el-row>
       </el-form>
@@ -53,7 +53,7 @@
         <el-row>
           <el-col :span="24">
             <el-button type="primary" plain @click="addUser('ruleForm')">确定</el-button>
-            <el-button type="primary" plain @click="cancel()">取消</el-button>
+            <el-button type="primary" plain @click="cancel('ruleForm')">取消</el-button>
           </el-col>
         </el-row>
       </el-form>
@@ -105,8 +105,9 @@
           }
         })
       },
-      reg () {
+      reg (formName) {
         this.ruleForm.isReg = true
+        this.$refs[formName].resetFields()
       },
       addUser (formName) {
         this.$refs[formName].validate((valid) => {
@@ -125,8 +126,9 @@
           }
         })
       },
-      cancel () {
+      cancel (formName) {
         this.ruleForm.isReg = false
+        this.$refs[formName].resetFields()
       }
     }
   }
