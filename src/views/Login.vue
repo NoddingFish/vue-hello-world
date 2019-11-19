@@ -9,15 +9,19 @@
       <el-form :model="ruleForm" ref="ruleForm" :rules="rules" label-width="80px" v-if="!ruleForm.isReg">
         <el-row>
           <el-col :span="24">
-            <el-form-item prop="name" label="用户名">
-              <el-input v-model="ruleForm.name"></el-input>
+            <el-form-item prop="name" label-width="0px">
+              <el-input v-model="ruleForm.name">
+                <template slot="prepend">用户名</template>
+              </el-input>
             </el-form-item>
           </el-col>
         </el-row>
         <el-row>
           <el-col :span="24">
-            <el-form-item prop="password" label="密码">
-              <el-input v-model="ruleForm.password" show-password></el-input>
+            <el-form-item prop="password" label-width="0px">
+              <el-input v-model="ruleForm.password" show-password>
+                <template slot="prepend">密码</template>
+              </el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -31,22 +35,28 @@
       <el-form :model="ruleForm" ref="ruleForm" :rules="rules" label-width="80px" v-else>
         <el-row>
           <el-col :span="24">
-            <el-form-item prop="name" label="用户名">
-              <el-input v-model="ruleForm.name"></el-input>
+            <el-form-item prop="name" label-width="0px">
+              <el-input v-model="ruleForm.name">
+                <template slot="prepend">用户名</template>
+              </el-input>
             </el-form-item>
           </el-col>
         </el-row>
         <el-row>
           <el-col :span="24">
-            <el-form-item prop="password" label="密码">
-              <el-input v-model="ruleForm.password" show-password></el-input>
+            <el-form-item prop="password" label-width="0px">
+              <el-input v-model="ruleForm.password" show-password>
+                <template slot="prepend">密码</template>
+              </el-input>
             </el-form-item>
           </el-col>
         </el-row>
         <el-row>
           <el-col :span="24">
-            <el-form-item prop="repeat" label="确认密码">
-              <el-input v-model="ruleForm.repeat" show-password></el-input>
+            <el-form-item prop="repeat" label-width="0px">
+              <el-input v-model="ruleForm.repeat" show-password>
+                <template slot="prepend">确认密码</template>
+              </el-input>
             </el-form-item>
           </el-col>
         </el-row>

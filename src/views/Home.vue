@@ -8,16 +8,18 @@
       </div>
     </el-main>
     <el-footer>
-      <div>
-        <ul>
-          <li>
-            <router-link :to="{name: 'list'}">新闻列表</router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'user'}">个人中心</router-link>
-          </li>
-        </ul>
-      </div>
+      <el-row>
+        <el-col :span="12">
+          <router-link :to="{name: 'list'}">
+            <el-button :span="24" type="primary">新闻列表</el-button>
+          </router-link>
+        </el-col>
+        <el-col :span="12">
+          <router-link :to="{name: 'user'}">
+            <el-button type="primary">个人中心</el-button>
+          </router-link>
+        </el-col>
+      </el-row>
     </el-footer>
   </el-container>
 </template>
@@ -33,17 +35,11 @@
   html, body, #app, .el-container {
     padding: 0;
     margin: 0;
-    width:100%;
+    width: 100%;
     height: 100% !important;
   }
 
-  a {
-    color: #42b983;
-    display: block;
-
-    &.active {
-      color: white;
-      background-color: #42b983;
-    }
+  el-footer{
+    margin-bottom: 0px;
   }
 </style>
