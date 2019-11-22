@@ -11,12 +11,12 @@
       <el-row>
         <el-col :span="12">
           <router-link :to="{name: 'list'}">
-            <el-button :span="24" type="primary">新闻列表</el-button>
+            <el-button :span="24" type="primary" class="el-width90">新闻列表</el-button>
           </router-link>
         </el-col>
         <el-col :span="12">
           <router-link :to="{name: 'user'}">
-            <el-button type="primary">个人中心</el-button>
+            <el-button type="primary" class="el-width90">个人中心</el-button>
           </router-link>
         </el-col>
       </el-row>
@@ -40,6 +40,11 @@
   }
 
   el-footer{
-    margin-bottom: 0px;
+    position: fixed;
+    bottom: 0px;
+  }
+
+  .el-width90 {
+    width: 90%;
   }
 </style>

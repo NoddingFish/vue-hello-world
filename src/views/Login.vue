@@ -26,9 +26,11 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="24">
-            <el-button type="primary" plain @click="login('ruleForm')">登录</el-button>
-            <el-button type="primary" plain @click="reg('ruleForm')">注册</el-button>
+          <el-col :span="12">
+            <el-button type="primary" plain @click="login('ruleForm')" class="el-width90">登录</el-button>
+          </el-col>
+          <el-col :span="12">
+            <el-button plain @click="reg('ruleForm')" class="el-width90">注册</el-button>
           </el-col>
         </el-row>
       </el-form>
@@ -61,9 +63,11 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="24">
-            <el-button type="primary" plain @click="addUser('ruleForm')">确定</el-button>
-            <el-button type="primary" plain @click="cancel('ruleForm')">取消</el-button>
+          <el-col :span="12">
+            <el-button type="primary" plain @click="addUser('ruleForm')" class="el-width90">确定</el-button>
+          </el-col>
+          <el-col :span="12">
+            <el-button plain @click="cancel('ruleForm')" class="el-width90">取消</el-button>
           </el-col>
         </el-row>
       </el-form>
@@ -152,5 +156,9 @@
     margin: 0px;
     /*统一设置高度为100%*/
     height: 100%;
+  }
+
+  .el-width90 {
+    width: 90%;
   }
 </style>

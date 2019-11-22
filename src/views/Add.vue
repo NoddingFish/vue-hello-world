@@ -1,12 +1,21 @@
 <template>
-  <div>
-    标题
-    <input type="text" v-model="title">
-    内容
-    <input type="text" v-model="content">
-
-    <el-button @click="add">提交</el-button>
-  </div>
+  <el-container>
+    <el-header></el-header>
+    <el-main>
+      <el-row>
+        <el-form label-width="40px">
+          <el-form-item label="标题">
+            <el-input v-model="title"></el-input>
+          </el-form-item>
+          <el-form-item label="内容">
+            <el-input type="textarea" :rows="5" v-model="content"></el-input>
+          </el-form-item>
+          <el-button type="primary" @click="add" class="el-width90">提交</el-button>
+        </el-form>
+      </el-row>
+    </el-main>
+    <el-footer></el-footer>
+  </el-container>
 </template>
 
 <script>
@@ -34,5 +43,7 @@
 </script>
 
 <style scoped>
-
+  .el-width90 {
+    width: 90%;
+  }
 </style>
